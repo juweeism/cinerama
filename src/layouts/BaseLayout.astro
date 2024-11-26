@@ -1,0 +1,66 @@
+---
+
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap" rel="stylesheet">
+
+    <title>mov2gcal</title>
+</head>
+<body>
+    <div class="flex flex-col h-full max-w-[999px] mx-auto">
+        <nav>
+            <a href="/#" class="text-5xl md:text-7xl rounded-[1.75rem] px-3 border-[palegoldenrod]">The Cinerama</a>
+        </nav>
+        <div class="flex-1">
+            <h1 class="max-w-[450px] mx-auto red-light border-y-2 border-[red] border-dotted mt-1 mb-2 font-[Codystar] text-xl md:text-3xl text-red-500">NOW SHOWING</h1>
+            <slot />
+        </div>
+        <footer class="py-5 text-[#909090]">
+            Movies from TMDB. <br >The theme is inspired from old cinema and drive ins. <br > Built with 🩶 by Mina Jane.
+        </footer>
+    </div>
+</body>
+<style is:global>
+    html, body {
+        font-family: 'News Cycle', sans-serif;
+        text-align: center;
+        background: black;
+        color: white;
+        padding: 1rem;
+        height: 100%;
+    }
+
+    nav a {
+        font-family: 'Neonderthaw';
+        color: palegoldenrod;
+        text-shadow: 0px 0px 5px goldenrod;
+    }
+
+    .red-light {
+        color: red;
+        text-shadow: 0px 0px 5px red;
+        box-shadow: 
+            0 0 10px red,
+            inset 0px 0px 5px red;
+    }
+
+    .movie-board {
+        border-style: dotted;
+        border-color: orange;
+        border-image-source: url('https://cl.ly/3c2J3c0l3r0P/dots.svg');
+        border-image-slice: 33% 33%;
+        border-image-repeat: round;
+    }
+
+</style>
+</html>
+
