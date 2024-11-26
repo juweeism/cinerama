@@ -4,7 +4,7 @@ import MovieDetails from "../../components/MovieDetails.tsx"
 const { id } = Astro.params;
 
 const TMDB_MOVIE_DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?language=en-US`
-const TMDB_BEARER_TOKEN = import.meta.env.TMDB_BEARER_TOKEN
+const TMDB_BEARER_TOKEN = import.meta.env.VITE_TMDB_BEARER_TOKEN
 
 const data = await fetch(TMDB_MOVIE_DETAILS_URL, { headers: { Authorization: `Bearer ${TMDB_BEARER_TOKEN}`, 'Content-Type': 'application/json'}}).then((response) => response.json()).catch((e) => console.error(e))
 ---
