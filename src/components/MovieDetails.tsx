@@ -32,8 +32,8 @@ const MovieDetails = (props: { movieData: MovieDetailsProps }) => {
         try {
             navigator.clipboard.writeText(CALENDAR_LINK)
             setIsCopied(true)
-        } catch (e) {
-            console.log(e.message)
+        } catch (err) {
+            console.error(err)
         }
     }
 
