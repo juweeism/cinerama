@@ -13,7 +13,7 @@ const UpcomingMovies = (props: { movies: Movies } | null) => {
     const { results: movies } = props.movies
     console.log(movies)
 
-    if (!movies.length) return <p>No movies found.</p>
+    if (!movies?.length) return <p>No movies found.</p>
 
     return (
         <div className="movie-board border-[1rem] md:border-[1.5rem]">
