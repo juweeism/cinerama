@@ -11,6 +11,7 @@ const UpcomingMovies = (props: { movies: Movies } | null) => {
     if (!props) return <p>No movies found.</p>
 
     const { results: movies } = props.movies
+    if (!movies.length) return <p>No movies found.</p>
 
     return (
         <div className="movie-board border-[1rem] md:border-[1.5rem]">

@@ -5,7 +5,7 @@ import UpcomingMovies from "../components/UpcomingMovies.tsx"
 const TMDB_BEARER_TOKEN = import.meta.env.TMDB_BEARER_TOKEN
 const TMDB_UPCOMING_MOVIE_URL = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"
 const data = await fetch(TMDB_UPCOMING_MOVIE_URL, { headers: { Authorization: `Bearer ${TMDB_BEARER_TOKEN}`, 'Content-Type': 'application/json'}}).then((response) => response.json()).catch((e) => console.error(e))
-
+console.log(data.results)
 ---
 
 <BaseLayout>
