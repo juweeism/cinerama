@@ -10,6 +10,8 @@ console.log(data.results)
 
 <BaseLayout>
 	<div>
+        {TMDB_BEARER_TOKEN}
+        <h1>{data.results}</h1>
         <div>
             <UpcomingMovies movies={data}/>
         </div>
